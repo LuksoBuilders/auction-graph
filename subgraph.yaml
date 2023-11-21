@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: EasyAuction
-    network: avalanche
+    network: mainnet
     source:
-      address: '0xb5D00F83680ea5E078e911995c64b43Fbfd1eE61'
+      address: "0xed6B3274Ec4D7CEc56d24D7584C0B16a3c592300"
       abi: EasyAuction
-      startBlock: 7347475
+      startBlock: 1418775
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -25,8 +25,8 @@ dataSources:
       abis:
         - name: EasyAuction
           file: ./abis/EasyAuction.json
-        - name: ERC20Contract
-          file: ./abis/ERC20.json
+        - name: LSP7
+          file: ./abis/LSP7.json
       eventHandlers:
         - event: AuctionCleared(indexed uint256,uint96,uint96,bytes32)
           handler: handleAuctionCleared
